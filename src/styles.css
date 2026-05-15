@@ -62,26 +62,27 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --radius: 0.25rem;
+  /* Heatherwick-inspired warm neutrals & stone */
+  --background: oklch(0.96 0.012 80);          /* warm bone */
+  --foreground: oklch(0.22 0.012 60);          /* deep stone */
+  --card: oklch(0.94 0.014 78);
+  --card-foreground: oklch(0.22 0.012 60);
+  --popover: oklch(0.96 0.012 80);
+  --popover-foreground: oklch(0.22 0.012 60);
+  --primary: oklch(0.32 0.018 55);             /* charcoal stone */
+  --primary-foreground: oklch(0.96 0.012 80);
+  --secondary: oklch(0.88 0.018 75);           /* soft beige */
+  --secondary-foreground: oklch(0.28 0.014 55);
+  --muted: oklch(0.9 0.012 78);
+  --muted-foreground: oklch(0.48 0.014 60);
+  --accent: oklch(0.72 0.06 60);               /* metallic bronze */
+  --accent-foreground: oklch(0.18 0.012 55);
+  --destructive: oklch(0.55 0.18 28);
+  --destructive-foreground: oklch(0.96 0.012 80);
+  --border: oklch(0.85 0.016 75);
+  --input: oklch(0.85 0.016 75);
+  --ring: oklch(0.72 0.06 60);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,6 +96,47 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+/* Typography */
+:root {
+  --font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html, body { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.01em; }
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
+
+.tracking-hero {
+  letter-spacing: 0.35em;
+}
+
+/* Reveal animations */
+.reveal { opacity: 0; transform: translateY(40px); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); transition: opacity 1.2s cubic-bezier(0.22,1,0.36,1), transform 1.2s cubic-bezier(0.22,1,0.36,1); }
+
+/* Scrolling indicator */
+@keyframes scroll-indicator {
+  0% { transform: translateY(-6px); opacity: 0; }
+  40% { opacity: 1; }
+  100% { transform: translateY(14px); opacity: 0; }
+}
+.scroll-dot { animation: scroll-indicator 2s ease-in-out infinite; }
+
+/* Subtle grain */
+.grain::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
+  opacity: 0.5;
 }
 
 .dark {
