@@ -1,26 +1,31 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
+import { Nav } from "@/components/site/Nav";
+import { Hero } from "@/components/site/Hero";
+import { Vision } from "@/components/site/Vision";
+import { Experience } from "@/components/site/Experience";
+import { Contact } from "@/components/site/Contact";
+import { useReveal } from "@/components/site/useReveal";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+function Index() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  return <Site mounted={mounted} />;
 }
 
-function Index() {
-  return <PlaceholderIndex />;
+function Site({ mounted }: { mounted: boolean }) {
+  useReveal();
+  return (
+    <main className="relative bg-background text-foreground antialiased">
+      <Nav />
+      <Hero />
+      <Vision />
+      {mounted && <Experience />}
+      <Contact />
+    </main>
+  );
 }
