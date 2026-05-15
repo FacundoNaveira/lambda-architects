@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const ThreeScene = lazy(() => import("./ThreeExperience.client"));
+const ThreeScene = lazy(() => import("./ThreeExperience"));
 
 export function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
