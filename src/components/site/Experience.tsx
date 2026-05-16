@@ -19,11 +19,11 @@ export function Experience() {
       // Expand canvas as user scrolls in
       gsap.fromTo(
         canvasWrapRef.current,
-        { width: "60%", height: "60vh", borderRadius: "12px" },
+        { width: "58%", height: "58vh", borderRadius: "16px" },
         {
-          width: "100%",
-          height: "100vh",
-          borderRadius: "0px",
+          width: "78%",
+          height: "86vh",
+          borderRadius: "8px",
           ease: "none",
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -61,7 +61,7 @@ export function Experience() {
         <div
           ref={canvasWrapRef}
           className="relative overflow-hidden bg-foreground"
-          style={{ width: "60%", height: "60vh" }}
+          style={{ width: "58%", height: "58vh" }}
         >
           {mounted && (
             <Suspense fallback={<div className="h-full w-full bg-foreground" />}>
