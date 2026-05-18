@@ -99,17 +99,6 @@ const projects: Project[] = [
   },
 ];
 
-const aspects = [
-  "aspect-[3/4]",
-  "aspect-[4/5]",
-  "aspect-[3/4]",
-  "aspect-[5/7]",
-  "aspect-[4/5]",
-  "aspect-[3/4]",
-  "aspect-[5/6]",
-  "aspect-[4/5]",
-];
-
 function ProjectsPage() {
   useReveal();
   return (
@@ -142,16 +131,22 @@ function ProjectsPage() {
 
       <section className="pb-32 md:pb-48">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 [column-fill:_balance]">
-            {projects.map((p, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            {projects.map((p) => (
               <article
                 key={p.no}
                 data-reveal
-                className="mb-8 break-inside-avoid group"
+                className="group flex flex-col"
               >
-                <div
-                  className={`overflow-hidden bg-muted ${aspects[i % aspects.length]}`}
-                >
+                <div className="mb-5 flex items-start justify-between gap-6 min-h-[3.5rem]">
+                  <p className="text-[10px] tabular-nums tracking-[0.4em] text-muted-foreground">
+                    {p.no} — {p.type}
+                  </p>
+                  <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground whitespace-nowrap">
+                    {p.place} · {p.year}
+                  </p>
+                </div>
+                <div className="overflow-hidden bg-muted w-full aspect-[4/5]">
                   <img
                     src={p.img}
                     alt={p.title}
@@ -159,19 +154,9 @@ function ProjectsPage() {
                     className="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.05]"
                   />
                 </div>
-                <div className="pt-5 flex items-start justify-between gap-6">
-                  <div>
-                    <p className="text-[10px] tabular-nums tracking-[0.4em] text-muted-foreground mb-2">
-                      {p.no} — {p.type}
-                    </p>
-                    <h2 className="font-display text-2xl md:text-3xl leading-tight">
-                      {p.title}
-                    </h2>
-                  </div>
-                  <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground whitespace-nowrap pt-2">
-                    {p.place} · {p.year}
-                  </p>
-                </div>
+                <h2 className="font-display text-2xl md:text-3xl leading-tight pt-5">
+                  {p.title}
+                </h2>
               </article>
             ))}
           </div>
