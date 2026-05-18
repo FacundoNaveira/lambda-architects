@@ -64,25 +64,25 @@
 :root {
   --radius: 0.25rem;
   /* Heatherwick-inspired warm neutrals & stone */
-  --background: oklch(0.96 0.012 80);          /* warm bone */
-  --foreground: oklch(0.22 0.012 60);          /* deep stone */
-  --card: oklch(0.94 0.014 78);
-  --card-foreground: oklch(0.22 0.012 60);
-  --popover: oklch(0.96 0.012 80);
-  --popover-foreground: oklch(0.22 0.012 60);
-  --primary: oklch(0.32 0.018 55);             /* charcoal stone */
-  --primary-foreground: oklch(0.96 0.012 80);
-  --secondary: oklch(0.88 0.018 75);           /* soft beige */
-  --secondary-foreground: oklch(0.28 0.014 55);
-  --muted: oklch(0.9 0.012 78);
-  --muted-foreground: oklch(0.48 0.014 60);
-  --accent: oklch(0.72 0.06 60);               /* metallic bronze */
-  --accent-foreground: oklch(0.18 0.012 55);
+  --background: oklch(0.955 0.014 75);         /* warm bone, harmonized with brick/copper tones */
+  --foreground: oklch(0.22 0.014 55);          /* deep stone */
+  --card: oklch(0.935 0.016 72);
+  --card-foreground: oklch(0.22 0.014 55);
+  --popover: oklch(0.955 0.014 75);
+  --popover-foreground: oklch(0.22 0.014 55);
+  --primary: oklch(0.3 0.02 50);               /* charcoal stone */
+  --primary-foreground: oklch(0.955 0.014 75);
+  --secondary: oklch(0.89 0.022 70);           /* soft sand beige to bridge image warmth */
+  --secondary-foreground: oklch(0.28 0.016 55);
+  --muted: oklch(0.905 0.014 72);
+  --muted-foreground: oklch(0.48 0.016 58);
+  --accent: oklch(0.66 0.085 50);              /* warm terracotta-bronze tying to brick & copper */
+  --accent-foreground: oklch(0.18 0.014 55);
   --destructive: oklch(0.55 0.18 28);
-  --destructive-foreground: oklch(0.96 0.012 80);
-  --border: oklch(0.85 0.016 75);
-  --input: oklch(0.85 0.016 75);
-  --ring: oklch(0.72 0.06 60);
+  --destructive-foreground: oklch(0.955 0.014 75);
+  --border: oklch(0.86 0.018 70);
+  --input: oklch(0.86 0.018 70);
+  --ring: oklch(0.66 0.085 50);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
