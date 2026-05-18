@@ -41,9 +41,9 @@ const projects: Project[] = [
     img: "https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Coal Drops Yard",
-    place: "London, UK",
-    img: "https://images.unsplash.com/photo-1568659585060-d63ae5d4b71d?auto=format&fit=crop&w=1400&q=80",
+    title: "Xi’an CCBD (Centre Culture Business District)",
+    place: "Xian, China",
+    img: "https://heatherwick.com/wp-content/uploads/0437_Xi_an_CCBD_N2305_medium_1406x1125_acf_cropped-900x720.jpg",
   },
   {
     title: "Zeitz MOCAA",
@@ -56,13 +56,21 @@ const projects: Project[] = [
     img: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Vessel",
-    place: "New York, US",
-    img: "https://images.unsplash.com/photo-1583335026242-394755527f95?auto=format&fit=crop&w=1400&q=80",
+    title: "EDEN",
+    place: "Singapore",
+    img: "https://heatherwick.com/wp-content/uploads/heatherwick-Website-Project-Page-16021_1977x2000_acf_cropped-2-890x900.jpg",
+  },
+    {
+    title: "Azabudai Hills",
+    place: "Tokyo, Japan",
+    img: "https://heatherwick.com/wp-content/uploads/231117_Azabudai-Hills-opens_press-release_FINAL_1379x776_acf_cropped-2-900x506.jpg",
   },
 ];
 
+import { useProject } from "@/context/ProjectContext";
+
 function ProjectsPage() {
+  const { setSelectedProject } = useProject();
   useReveal();
   return (
     <main className="relative bg-background text-foreground antialiased animate-fade-in">
@@ -99,18 +107,19 @@ function ProjectsPage() {
               <article
                 key={p.title}
                 data-reveal
-                className="group flex flex-col"
+                className="group flex flex-col cursor-pointer"
+                onClick={() => setSelectedProject(p)}
               >
-                <div className="overflow-hidden bg-muted w-full aspect-[4/5]">
+                <div className="h-[450px] w-full overflow-hidden flex items-center justify-center mb-5">
                   <img
                     src={p.img}
                     alt={p.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.05]"
+                    className="w-full h-full object-contain transition-transform duration-[1600ms] ease-out group-hover:scale-[1.05]"
                   />
                 </div>
-                <div className="pt-5 min-h-[5.5rem]">
-                  <h2 className="font-display text-2xl md:text-3xl leading-tight">
+                <div>
+                  <h2 className="font-display text-2xl md:text-3xl leading-tight group-hover:text-accent transition-colors">
                     {p.title}
                   </h2>
                   <p className="mt-2 text-[11px] tracking-[0.2em] uppercase text-muted-foreground">

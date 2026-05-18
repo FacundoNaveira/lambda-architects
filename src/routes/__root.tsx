@@ -113,12 +113,25 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { ProjectProvider, useProject } from "@/context/ProjectContext";
+import { ProjectDetail } from "@/components/site/ProjectDetail";
+
+function RootContent() {
+  const { selectedProject, setSelectedProject } = useProject();
+  if (selectedProject) {
+    return <ProjectDetail project={selectedProject} onBack={() => setSelectedProject(null)} />;
+  }
+  return <Outlet />;
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <Outlet />
-    </QueryClientProvider>
+    <ProjectProvider>
+      <QueryClientProvider client={queryClient}>
+        <RootContent />
+      </QueryClientProvider>
+    </ProjectProvider>
   );
 }

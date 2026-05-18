@@ -40,7 +40,7 @@ export default function ThreeScene() {
         <OrganicForm />
         <Environment preset="warehouse" />
       </Suspense>
-      <OrbitControls enablePan={false} enableZoom autoRotate={false} minDistance={2.5} maxDistance={8} />
+      <OrbitControls enablePan={false} enableZoom={false} enableRotate={false} autoRotate={true} minDistance={2.5} maxDistance={8} />
     </Canvas>
   );
 }

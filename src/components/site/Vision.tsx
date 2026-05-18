@@ -13,13 +13,16 @@ const projects = [
   },
   {
     no: "03",
-    title: "Coal Drops Yard",
-    place: "London, UK",
-    img: "https://images.unsplash.com/photo-1568659585060-d63ae5d4b71d?auto=format&fit=crop&w=1600&q=80",
+    title: "Bogota EAN University",
+    place: "Bogota, Colombia",
+    img: "https://heatherwick.com/wp-content/uploads/2-comp_1080x939_acf_cropped-2-900x783.jpg",
   },
 ];
 
+import { useProject } from "@/context/ProjectContext";
+
 export function Vision() {
+  const { setSelectedProject } = useProject();
   return (
     <section id="vision" className="relative bg-background text-foreground">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 md:py-48">
@@ -59,39 +62,31 @@ export function Vision() {
           </div>
         </div>
 
-        <div className="space-y-32 md:space-y-48">
+        <div className="flex flex-col">
           {projects.map((p, i) => (
             <article
               key={p.no}
-              className={`grid grid-cols-12 gap-6 items-end ${
-                i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""
+              data-reveal
+              className={`group flex flex-col md:flex-row gap-12 items-center justify-between py-16 cursor-pointer ${
+                i % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
+              onClick={() => setSelectedProject(p)}
             >
-              <div
-                data-reveal
-                className={`col-span-12 ${i % 2 === 0 ? "md:col-span-7" : "md:col-span-7 md:col-start-6"}`}
-              >
-                <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden bg-muted">
-                  <img
-                    src={p.img}
-                    alt={p.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-[1500ms] hover:scale-[1.04]"
-                  />
-                </div>
-              </div>
-              <div
-                data-reveal
-                className={`col-span-12 ${
-                  i % 2 === 0 ? "md:col-span-4 md:col-start-9" : "md:col-span-4 md:col-start-2"
-                } pb-4`}
-              >
-              <h3 className="font-display text-3xl md:text-4xl leading-tight mb-3">
+              <div className="w-full md:w-1/2 flex flex-col justify-center order-2 md:order-none">
+                <h3 className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight group-hover:text-accent transition-colors mb-3">
                   {p.title}
                 </h3>
-              <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+                <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
                   {p.place}
                 </p>
+              </div>
+              <div className="w-full md:w-1/2 h-[450px] overflow-hidden flex items-center justify-center order-1 md:order-none">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full h-full object-contain transition-transform duration-[1500ms] ease-out group-hover:scale-[1.04]"
+                />
               </div>
             </article>
           ))}
