@@ -29,12 +29,12 @@ export function ProjectDetail({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24 items-center">
           <div className="md:col-span-8 order-2 md:order-1">
             <div
-              className="w-full overflow-hidden bg-muted aspect-[4/3] md:aspect-auto md:h-[75vh]"
+              className="w-full overflow-hidden aspect-[4/3] md:aspect-auto md:h-[75vh]"
             >
               <img
                 src={project.img}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
           </div>
