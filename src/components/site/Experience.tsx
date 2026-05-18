@@ -15,7 +15,7 @@ export function Experience() {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
+  const ctx = gsap.context(() => {
       // Expand canvas as user scrolls in
       gsap.fromTo(
         canvasWrapRef.current,
@@ -38,18 +38,18 @@ export function Experience() {
         opacity: 0,
         y: -40,
         ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=40%",
-          scrub: true,
-          pin: false,
-        },
-      });
-    }, sectionRef);
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "+=40%",
+        scrub: true,
+        pin: false,
+      },
+    });
+  }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+    return () => ctx.revert(); // Limpieza de GSAP al desmontar
+}, []);
 
   return (
     <section
@@ -74,12 +74,9 @@ export function Experience() {
           ref={headingRef}
           className="pointer-events-none absolute top-10 md:top-16 left-0 right-0 px-6 md:px-12 z-10"
         >
-          <div className="mx-auto max-w-[1600px] flex items-start justify-between">
+          <div className="mx-auto max-w-[1600px] flex items-start">
             <p className="text-[10px] tracking-[0.4em] uppercase text-background/70">
               — 3D Experience
-            </p>
-            <p className="text-[10px] tracking-[0.4em] uppercase text-background/70">
-              Drag · Zoom
             </p>
           </div>
         </div>

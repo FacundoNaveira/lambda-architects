@@ -46,13 +46,7 @@ export function Contact() {
             <p className="font-display text-2xl leading-snug mt-2">+44 20 7946 0021</p>
           </div>
         </div>
-
-        <div className="mt-32 pt-8 border-t border-border flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <p className="font-display italic text-3xl md:text-5xl">Λambda</p>
-          <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
-            © {new Date().getFullYear()} Lambda Architecture · All work shown is studio property
-          </p>
-        </div>
+        
       </div>
       </section>
     </>
