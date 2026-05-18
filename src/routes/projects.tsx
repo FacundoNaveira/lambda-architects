@@ -24,77 +24,50 @@ export const Route = createFileRoute("/projects")({
 });
 
 type Project = {
-  no: string;
   title: string;
   place: string;
-  year: string;
-  type: string;
   img: string;
 };
 
 const projects: Project[] = [
   {
-    no: "01",
     title: "Hollow Tide Pavilion",
     place: "Setouchi, JP",
-    year: "2024",
-    type: "Pavilion",
     img: "https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "02",
     title: "Brass Garden House",
     place: "Lisbon, PT",
-    year: "2023",
-    type: "Residential",
     img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "03",
     title: "Quarry Cultural Hall",
     place: "Oslo, NO",
-    year: "2022",
-    type: "Cultural",
     img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "04",
     title: "Salt Chapel",
     place: "Cádiz, ES",
-    year: "2022",
-    type: "Sacred",
     img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "05",
     title: "Iron Loom Atelier",
     place: "Kyoto, JP",
-    year: "2021",
-    type: "Workshop",
     img: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "06",
     title: "River Stone Library",
     place: "Porto, PT",
-    year: "2021",
-    type: "Civic",
     img: "https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "07",
     title: "Copper Wind House",
     place: "Reykjavík, IS",
-    year: "2020",
-    type: "Residential",
     img: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    no: "08",
     title: "Marble Tide Bath",
     place: "Bodrum, TR",
-    year: "2019",
-    type: "Wellness",
     img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80",
   },
 ];
@@ -134,18 +107,10 @@ function ProjectsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
             {projects.map((p) => (
               <article
-                key={p.no}
+                key={p.title}
                 data-reveal
                 className="group flex flex-col"
               >
-                <div className="mb-5 flex items-start justify-between gap-6 min-h-[3.5rem]">
-                  <p className="text-[10px] tabular-nums tracking-[0.4em] text-muted-foreground">
-                    {p.no} — {p.type}
-                  </p>
-                  <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground whitespace-nowrap">
-                    {p.place} · {p.year}
-                  </p>
-                </div>
                 <div className="overflow-hidden bg-muted w-full aspect-[4/5]">
                   <img
                     src={p.img}
@@ -154,9 +119,14 @@ function ProjectsPage() {
                     className="h-full w-full object-cover transition-transform duration-[1600ms] ease-out group-hover:scale-[1.05]"
                   />
                 </div>
-                <h2 className="font-display text-2xl md:text-3xl leading-tight pt-5">
-                  {p.title}
-                </h2>
+                <div className="pt-5 min-h-[5.5rem]">
+                  <h2 className="font-display text-2xl md:text-3xl leading-tight">
+                    {p.title}
+                  </h2>
+                  <p className="mt-2 text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+                    {p.place}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
