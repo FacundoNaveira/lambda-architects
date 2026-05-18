@@ -31,44 +31,34 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Hollow Tide Pavilion",
-    place: "Setouchi, JP",
-    img: "https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?auto=format&fit=crop&w=1400&q=80",
+    title: "Azabudai Hills",
+    place: "Tokyo, JP",
+    img: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Brass Garden House",
-    place: "Lisbon, PT",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=80",
+    title: "Little Island",
+    place: "New York, US",
+    img: "https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Quarry Cultural Hall",
-    place: "Oslo, NO",
-    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=80",
+    title: "Coal Drops Yard",
+    place: "London, UK",
+    img: "https://images.unsplash.com/photo-1568659585060-d63ae5d4b71d?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Salt Chapel",
-    place: "Cádiz, ES",
-    img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=80",
+    title: "Zeitz MOCAA",
+    place: "Cape Town, ZA",
+    img: "https://images.unsplash.com/photo-1577985043696-8bd54d9f093f?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "Iron Loom Atelier",
-    place: "Kyoto, JP",
-    img: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1400&q=80",
+    title: "1000 Trees",
+    place: "Shanghai, CN",
+    img: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1400&q=80",
   },
   {
-    title: "River Stone Library",
-    place: "Porto, PT",
-    img: "https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "Copper Wind House",
-    place: "Reykjavík, IS",
-    img: "https://images.unsplash.com/photo-1431576901776-e539bd916ba2?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "Marble Tide Bath",
-    place: "Bodrum, TR",
-    img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80",
+    title: "Vessel",
+    place: "New York, US",
+    img: "https://images.unsplash.com/photo-1583335026242-394755527f95?auto=format&fit=crop&w=1400&q=80",
   },
 ];
 

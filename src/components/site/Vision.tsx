@@ -1,21 +1,21 @@
 const projects = [
   {
     no: "01",
-    title: "Hollow Tide Pavilion",
-    place: "Setouchi, JP — 2024",
-    img: "https://images.unsplash.com/photo-1519327232521-1ea2c736d34d?auto=format&fit=crop&w=1600&q=80",
+    title: "Azabudai Hills",
+    place: "Tokyo, JP",
+    img: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=80",
   },
   {
     no: "02",
-    title: "Brass Garden House",
-    place: "Lisbon, PT — 2023",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80",
+    title: "Little Island",
+    place: "New York, US",
+    img: "https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=1600&q=80",
   },
   {
     no: "03",
-    title: "Quarry Cultural Hall",
-    place: "Oslo, NO — 2022",
-    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=80",
+    title: "Coal Drops Yard",
+    place: "London, UK",
+    img: "https://images.unsplash.com/photo-1568659585060-d63ae5d4b71d?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 
@@ -86,13 +86,10 @@ export function Vision() {
                   i % 2 === 0 ? "md:col-span-4 md:col-start-9" : "md:col-span-4 md:col-start-2"
                 } pb-4`}
               >
-                <p className="text-[10px] tabular-nums tracking-[0.4em] text-muted-foreground mb-4">
-                  {p.no} / 03
-                </p>
-                <h3 className="font-display text-3xl md:text-4xl leading-tight mb-3">
+              <h3 className="font-display text-3xl md:text-4xl leading-tight mb-3">
                   {p.title}
                 </h3>
-                <p className="font-body text-sm tracking-[0.15em] uppercase text-muted-foreground">
+              <p className="font-body text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
                   {p.place}
                 </p>
               </div>
