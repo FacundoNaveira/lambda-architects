@@ -69,6 +69,8 @@ const projects: Project[] = [
 
 import { useProject } from "@/context/ProjectContext";
 
+import { Link } from "@tanstack/react-router";
+
 function ProjectsPage() {
   const { setSelectedProject } = useProject();
   useReveal();
@@ -78,15 +80,15 @@ function ProjectsPage() {
 
       <section className="pt-32 md:pt-44 pb-16 md:pb-24">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+          <Link
+            to="/"
+            className="mb-12 text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-accent transition-colors group flex items-center gap-2 cursor-pointer w-fit"
+          >
+            <span className="transition-transform group-hover:-translate-x-1">←</span>
+            Back
+          </Link>
           <div className="grid grid-cols-12 gap-8 items-end">
-            <div className="col-span-12 md:col-span-3">
-              <p
-                data-reveal
-                className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground"
-              >
-                — Selected Works
-              </p>
-            </div>
+            <div className="col-span-12 md:col-span-3"></div>
             <div className="col-span-12 md:col-span-9">
               <h1
                 data-reveal

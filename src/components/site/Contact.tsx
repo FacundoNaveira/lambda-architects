@@ -1,7 +1,11 @@
+import { Sponsors } from "./Sponsors";
+
 export function Contact() {
   return (
-    <section id="contact" className="relative bg-secondary text-foreground">
-      <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 md:py-48">
+    <>
+      <Sponsors />
+      <section id="contact" className="relative bg-secondary text-foreground">
+        <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 md:py-48">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-3">
             <p data-reveal className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
@@ -50,6 +54,7 @@ export function Contact() {
           </p>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

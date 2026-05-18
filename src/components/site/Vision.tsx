@@ -62,6 +62,12 @@ export function Vision() {
           </div>
         </div>
 
+        <div className="mb-12 border-t border-foreground/10 pt-16">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
+            — Featured Works
+          </p>
+        </div>
+
         <div className="flex flex-col">
           {projects.map((p, i) => (
             <article
