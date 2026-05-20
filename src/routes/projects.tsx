@@ -109,8 +109,7 @@ function ProjectsPage() {
               <article
                 key={p.title}
                 data-reveal
-                className="group flex flex-col cursor-pointer"
-                onClick={() => setSelectedProject(p)}
+                className="group flex flex-col"
               >
                 <div className="h-[450px] w-full overflow-hidden flex items-center justify-center mb-5">
                   <img
@@ -121,12 +120,19 @@ function ProjectsPage() {
                   />
                 </div>
                 <div>
-                  <h2 className="font-display text-2xl md:text-3xl leading-tight group-hover:text-accent transition-colors">
+                  <h2 className="font-display text-2xl md:text-3xl leading-tight">
                     {p.title}
                   </h2>
                   <p className="mt-2 text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
                     {p.place}
                   </p>
+                  <button
+                    onClick={() => setSelectedProject(p)}
+                    className="mt-8 text-[10px] md:text-xs uppercase tracking-[0.25em] text-foreground hover:text-[#B0A080] border-b border-[#3C3A36]/20 pb-1 transition-colors cursor-pointer w-fit flex items-center gap-2 group/btn"
+                  >
+                    Ver proyecto
+                    <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                  </button>
                 </div>
               </article>
             ))}

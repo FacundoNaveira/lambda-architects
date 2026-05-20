@@ -73,18 +73,24 @@ export function Vision() {
             <article
               key={p.no}
               data-reveal
-              className={`group flex flex-col md:flex-row gap-12 items-center justify-between py-16 cursor-pointer ${
+              className={`group flex flex-col md:flex-row gap-12 items-center justify-between py-16 ${
                 i % 2 === 1 ? "md:flex-row-reverse" : ""
               }`}
-              onClick={() => setSelectedProject(p)}
             >
               <div className="w-full md:w-1/2 flex flex-col justify-center order-2 md:order-none">
-                <h3 className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight group-hover:text-accent transition-colors mb-3">
+                <h3 className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight mb-3">
                   {p.title}
                 </h3>
-                <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground">
+                <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground mb-4">
                   {p.place}
                 </p>
+                <button
+                  onClick={() => setSelectedProject(p)}
+                  className="mt-8 text-[10px] md:text-xs uppercase tracking-[0.25em] text-foreground hover:text-[#B0A080] border-b border-[#3C3A36]/20 pb-1 transition-colors cursor-pointer w-fit flex items-center gap-2 group/btn"
+                >
+                  Ver proyecto
+                  <span className="transition-transform duration-300 group-hover/btn:translate-x-1">→</span>
+                </button>
               </div>
               <div className="w-full md:w-1/2 h-[450px] overflow-hidden flex items-center justify-center order-1 md:order-none">
                 <img
