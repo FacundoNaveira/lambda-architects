@@ -3,19 +3,19 @@ const projects = [
     no: "01",
     title: "Azabudai Hills",
     place: "Tokyo, JP",
-    img: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1600&q=80",
+    img: "/Azabudai Hills.jpg",
   },
   {
     no: "02",
     title: "Little Island",
     place: "New York, US",
-    img: "https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=1600&q=80",
+    img: "/little island.jpg",
   },
   {
     no: "03",
     title: "Bogota EAN University",
     place: "Bogota, Colombia",
-    img: "https://heatherwick.com/wp-content/uploads/2-comp_1080x939_acf_cropped-2-900x783.jpg",
+    img: "/Bogota EAN University.jpg",
   },
 ];
 

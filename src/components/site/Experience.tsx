@@ -1,9 +1,18 @@
 import { useEffect, useState, lazy, Suspense } from "react";
+import { useProject } from "@/context/ProjectContext";
 
 const ThreeScene = lazy(() => import("./ThreeExperience.tsx"));
 
+const hospitalProject = {
+  title: "Hospital Regional Rosario",
+  place: "Rosario, Argentina",
+  img: "/Columbia Library.jpg",
+  description: "El complejo sanitario se despliega en tres niveles estructurados a partir de un núcleo central de hormigón visto. La planta baja alberga las áreas de alta complejidad y guardia médica, mientras que los pisos superiores se reservan para internación y salas quirúrgicas, optimizando los flujos de circulación técnica.\n\nEstrategia Bioclimática: Diseñado específicamente para el clima de la región de Santa Fe, el edificio incorpora parasoles verticales de madera local que mitigan la radiación solar directa del oeste. Los patios internos actúan como pulmones térmicos que fuerzan la ventilación cruzada pasiva, reduciendo un 35% el consumo energético operativo.",
+};
+
 export function Experience() {
   const [mounted, setMounted] = useState(false);
+  const { setSelectedProject } = useProject();
 
   useEffect(() => {
     setMounted(true);
@@ -27,7 +36,10 @@ export function Experience() {
             <p className="font-body text-sm md:text-base leading-relaxed text-background/70 max-w-xl mb-10">
               Desarrollamos infraestructura de salud pública con un enfoque en la eficiencia lumínica y la integración urbana. Este hospital regional representa un hito en la arquitectura sanitaria de Santa Fe.
             </p>
-            <button className="border border-background/20 hover:border-background/60 hover:text-accent hover:bg-background/5 text-background/80 transition-all uppercase tracking-[0.2em] text-[10px] md:text-xs px-8 py-4 w-fit cursor-pointer">
+            <button 
+              onClick={() => setSelectedProject(hospitalProject)}
+              className="border border-background/20 hover:border-background/60 hover:text-accent hover:bg-background/5 text-background/80 transition-all uppercase tracking-[0.2em] text-[10px] md:text-xs px-8 py-4 w-fit cursor-pointer"
+            >
               Ver el proyecto
             </button>
           </div>

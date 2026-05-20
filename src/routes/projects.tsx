@@ -33,37 +33,42 @@ const projects: Project[] = [
   {
     title: "Azabudai Hills",
     place: "Tokyo, JP",
-    img: "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1400&q=80",
+    img: "/Azabudai Hills.jpg",
   },
   {
     title: "Little Island",
     place: "New York, US",
-    img: "https://images.unsplash.com/photo-1545987796-200677ee1011?auto=format&fit=crop&w=1400&q=80",
+    img: "/little island.jpg",
   },
   {
     title: "Xi’an CCBD (Centre Culture Business District)",
     place: "Xian, China",
-    img: "https://heatherwick.com/wp-content/uploads/0437_Xi_an_CCBD_N2305_medium_1406x1125_acf_cropped-900x720.jpg",
+    img: "/Xi’an CCBD (Centre Culture Business District).jpg",
   },
   {
     title: "Zeitz MOCAA",
     place: "Cape Town, ZA",
-    img: "https://images.unsplash.com/photo-1577985043696-8bd54d9f093f?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    title: "1000 Trees",
-    place: "Shanghai, CN",
-    img: "https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1400&q=80",
+    img: "/Zeitz MOCAA.jpg",
   },
   {
     title: "EDEN",
     place: "Singapore",
-    img: "https://heatherwick.com/wp-content/uploads/heatherwick-Website-Project-Page-16021_1977x2000_acf_cropped-2-890x900.jpg",
+    img: "/EDEN.jpg",
   },
-    {
-    title: "Azabudai Hills",
-    place: "Tokyo, Japan",
-    img: "https://heatherwick.com/wp-content/uploads/231117_Azabudai-Hills-opens_press-release_FINAL_1379x776_acf_cropped-2-900x506.jpg",
+  {
+    title: "Bogota EAN University",
+    place: "Bogota, Colombia",
+    img: "/Bogota EAN University.jpg",
+  },
+  {
+    title: "Columbia Library",
+    place: "New York, US",
+    img: "/Columbia Library.jpg",
+  },
+  {
+    title: "Google Bay View",
+    place: "California, US",
+    img: "/Google Bay View.jpg",
   },
 ];
 
