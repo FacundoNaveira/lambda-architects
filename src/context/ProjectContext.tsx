@@ -6,6 +6,8 @@ export type Project = {
   img: string;
   description?: string;
   no?: string;
+  images?: string[];
+  technicalDetails?: Record<string, string>;
 };
 
 type ProjectContextType = {

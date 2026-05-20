@@ -1,10 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
+import { useProject } from "@/context/ProjectContext";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { selectedProject } = useProject();
   const onHome = location.pathname === "/";
+
+  const isProjectDetail =
+    !!selectedProject ||
+    location.pathname.includes("/proyectos/") ||
+    location.pathname.includes("/project/");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -12,6 +19,8 @@ export function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  if (isProjectDetail) return null;
 
   const linkColor =
     scrolled || !onHome

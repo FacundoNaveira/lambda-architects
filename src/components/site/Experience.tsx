@@ -8,6 +8,13 @@ const hospitalProject = {
   place: "Rosario, Argentina",
   img: "./public/hospital.avif",
   description: "El complejo sanitario se despliega en tres niveles estructurados a partir de un núcleo central de hormigón visto. La planta baja alberga las áreas de alta complejidad y guardia médica, mientras que los pisos superiores se reservan para internación y salas quirúrgicas, optimizando los flujos de circulación técnica.\n\nEstrategia Bioclimática: Diseñado específicamente para el clima de la región de Santa Fe, el edificio incorpora parasoles verticales de madera local que mitigan la radiación solar directa del oeste. Los patios internos actúan como pulmones térmicos que fuerzan la ventilación cruzada pasiva, reduciendo un 35% el consumo energético operativo.",
+  images: ["/hospital.avif", "/Azabudai Hills.jpg", "/little island.jpg"],
+  technicalDetails: {
+    ubicacion: "Rosario, Santa Fe, Argentina",
+    programa: "Complejo sanitario regional de mediana y alta complejidad, guardia y salas de internación",
+    sustentabilidad: "Estrategia bioclimática pasiva, ventilación cruzada natural y parasoles verticales de madera local",
+    materiales: "Núcleo de hormigón visto, parasoles de madera sustentable y cerramientos de vidrio de control solar",
+  },
 };
 
 export function Experience() {

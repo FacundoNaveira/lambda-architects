@@ -1,25 +1,46 @@
-const projects = [
+const projects: Project[] = [
   {
     no: "01",
     title: "Azabudai Hills",
-    place: "Tokyo, JP",
+    place: "Tokio, Japón",
     img: "/Azabudai Hills.jpg",
+    images: ["/Azabudai Hills.jpg", "/little island.jpg", "/Bogota EAN University.jpg"],
+    technicalDetails: {
+      ubicacion: "Minato-ku, Tokio, Japón",
+      programa: "Distrito urbano, áreas residenciales, comerciales, oficinas y jardín público",
+      concepto: "Una pérgola tridimensional gigante que entrelaza la naturaleza con la arquitectura",
+      materiales: "Estructura sinuosa de acero, vidrio curvo de alta eficiencia y terrazas verdes",
+    },
   },
   {
     no: "02",
     title: "Little Island",
-    place: "New York, US",
+    place: "Nueva York, EE. UU.",
     img: "/little island.jpg",
+    images: ["/little island.jpg", "/Bogota EAN University.jpg", "/Azabudai Hills.jpg"],
+    technicalDetails: {
+      ubicacion: "Nueva York, EE. UU.",
+      programa: "Parque público flotante y anfiteatro sobre el río Hudson",
+      concepto: "Pilotes de hormigón con forma de tulipán que emergen del agua para sostener la topografía del parque",
+      materiales: "Estructura de hormigón prefabricado y más de 350 especies de árboles y plantas locales",
+    },
   },
   {
     no: "03",
     title: "Bogota EAN University",
-    place: "Bogota, Colombia",
+    place: "Bogotá, Colombia",
     img: "/Bogota EAN University.jpg",
+    images: ["/Bogota EAN University.jpg", "/Azabudai Hills.jpg", "/little island.jpg"],
+    technicalDetails: {
+      ubicacion: "Bogotá, Colombia",
+      programa: "Campus universitario, aulas, oficinas y espacios públicos",
+      sustentabilidad: "Fachada bio-conectada con control solar pasivo y ventilación natural integrada",
+      materiales: "Estructura de hormigón, tensores metálicos y paneles de madera local",
+    },
   },
 ];
 
-import { useProject } from "@/context/ProjectContext";
+import { useProject, Project } from "@/context/ProjectContext";
 
 export function Vision() {
   const { setSelectedProject } = useProject();
