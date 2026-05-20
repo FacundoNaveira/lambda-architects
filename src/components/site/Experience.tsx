@@ -6,7 +6,7 @@ const ThreeScene = lazy(() => import("./ThreeExperience.tsx"));
 const hospitalProject = {
   title: "Hospital Regional Rosario",
   place: "Rosario, Argentina",
-  img: "/Columbia Library.jpg",
+  img: "./public/hospital.avif",
   description: "El complejo sanitario se despliega en tres niveles estructurados a partir de un núcleo central de hormigón visto. La planta baja alberga las áreas de alta complejidad y guardia médica, mientras que los pisos superiores se reservan para internación y salas quirúrgicas, optimizando los flujos de circulación técnica.\n\nEstrategia Bioclimática: Diseñado específicamente para el clima de la región de Santa Fe, el edificio incorpora parasoles verticales de madera local que mitigan la radiación solar directa del oeste. Los patios internos actúan como pulmones térmicos que fuerzan la ventilación cruzada pasiva, reduciendo un 35% el consumo energético operativo.",
 };
 
