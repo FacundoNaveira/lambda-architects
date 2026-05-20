@@ -38,7 +38,7 @@ export function Nav() {
           to="/projects"
           className={`text-xs md:text-sm tracking-[0.2em] uppercase font-body transition-opacity hover:opacity-60 ${linkColor}`}
         >
-          Projects
+          Proyectos
         </Link>
       </nav>
     </header>

@@ -23,7 +23,7 @@ export function ProjectDetail({
           className="mb-12 text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-accent transition-colors group flex items-center gap-2 cursor-pointer"
         >
           <span className="transition-transform group-hover:-translate-x-1">←</span>
-          Back
+          Volver
         </button>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-24 items-center">
@@ -49,7 +49,7 @@ export function ProjectDetail({
             </p>
             <p className="font-body text-base md:text-lg leading-relaxed text-muted-foreground">
               {project.description ||
-                "A custom architectural description for this unique project, shaped by material, light and land. We approached this site as a quiet conversation between the environment and the inhabitants."}
+                "Una descripción arquitectónica a medida para este proyecto singular, moldeada por la materia, la luz y la tierra. Planteamos este sitio como un diálogo silencioso entre el entorno y sus habitantes."}
             </p>
           </div>
         </div>

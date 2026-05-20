@@ -41,23 +41,22 @@ export function Hero() {
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
         <p data-hero-item="eyebrow" className="mb-6 text-[10px] md:text-xs tracking-[0.5em] uppercase text-background/80">
-          Est. 2014 — London / Tokyo
+          Est. 2014 — Rosario, Santa Fe
         </p>
         <h1 data-hero-item="title" className="font-display font-light text-background text-[14vw] md:text-[10vw] leading-[0.9] tracking-hero">
           LAMBDA
         </h1>
         <h2 data-hero-item="subtitle" className="font-display font-light text-background/90 text-[6vw] md:text-[3.5vw] mt-2 tracking-[0.3em] italic">
-          architecture
+          arquitectura
         </h2>
         <p data-hero-item="body" className="mt-10 max-w-md text-sm md:text-base text-background/80 font-body leading-relaxed">
-          A studio of spatial craft — sculpting environments where material, light and form
-          breathe as one organism.
+          Un estudio de artesanía espacial: esculpiendo entornos donde la materia, la luz y la forma respiran como un solo organismo.
         </p>
       </div>
-
+ 
       <div data-hero-item="scroll" className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3">
         <span className="text-[10px] tracking-[0.4em] uppercase text-background/70">
-          Scroll to explore
+          Deslizar para explorar
         </span>
         <div className="relative h-12 w-[1px] overflow-hidden bg-background/20">
           <span className="scroll-dot absolute left-1/2 top-0 h-2 w-[1px] -translate-x-1/2 bg-background" />

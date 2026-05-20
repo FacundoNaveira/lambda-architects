@@ -26,7 +26,7 @@ export function Team() {
         <div className="grid grid-cols-12 gap-8 mb-16">
           <div className="col-span-12 md:col-span-3">
             <p data-reveal className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
-              — Leadership
+              — Dirección
             </p>
           </div>
           <div className="col-span-12 md:col-span-9">
@@ -34,7 +34,7 @@ export function Team() {
               data-reveal
               className="font-display font-light text-4xl md:text-6xl leading-[1.05] tracking-tight"
             >
-              Design, directed by purpose.
+              Diseño con propósito.
             </h2>
           </div>
         </div>
@@ -205,7 +205,7 @@ export function Contact() {
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-3">
               <p data-reveal className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
-                — Contact
+                — Contacto
               </p>
             </div>
             <div className="col-span-12 md:col-span-9">
@@ -213,8 +213,8 @@ export function Contact() {
                 data-reveal
                 className="font-display font-light text-5xl md:text-8xl leading-[0.95] tracking-tight"
               >
-                Begin a<br />
-                <span className="italic text-accent">conversation.</span>
+                Iniciá una<br />
+                <span className="italic text-accent">conversación.</span>
               </h2>
             </div>
           </div>
@@ -224,24 +224,24 @@ export function Contact() {
             <div className="w-full md:w-1/3 flex flex-col gap-12">
               <div>
                 <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
-                  Studio
+                  Estudio
                 </p>
                 <p className="font-display text-2xl leading-snug">
-                  42 Calvert Avenue<br />
-                  London E2 7JP
+                  Bv. Oroño 425<br />
+                  Rosario, Santa Fe
                 </p>
               </div>
               <div>
                 <p className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground mb-3">
-                  Enquiries
+                  Consultas
                 </p>
                 <a
-                  href="mailto:hello@lambda-arch.studio"
+                  href="mailto:hola@lambda-arch.studio"
                   className="font-display text-2xl leading-snug hover:text-accent transition-colors block"
                 >
-                  hello@lambda-arch.studio
+                  hola@lambda-arch.studio
                 </a>
-                <p className="font-display text-2xl leading-snug mt-2">+44 20 7946 0021</p>
+                <p className="font-display text-2xl leading-snug mt-2">+54 341 425-0021</p>
               </div>
             </div>
 
@@ -251,7 +251,7 @@ export function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="flex flex-col gap-2">
                     <label htmlFor="name" className="font-body text-xs tracking-widest text-[#3C3A36]/60 uppercase">
-                      Name
+                      Nombre
                     </label>
                     <input
                       type="text"
@@ -266,7 +266,7 @@ export function Contact() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <label htmlFor="email" className="font-body text-xs tracking-widest text-[#3C3A36]/60 uppercase">
-                      Email
+                      Correo electrónico
                     </label>
                     <input
                       type="email"
@@ -283,7 +283,7 @@ export function Contact() {
 
                 <div className="flex flex-col gap-2">
                   <label htmlFor="subject" className="font-body text-xs tracking-widest text-[#3C3A36]/60 uppercase">
-                    Subject
+                    Asunto
                   </label>
                   <input
                     type="text"
@@ -299,7 +299,7 @@ export function Contact() {
 
                 <div className="flex flex-col gap-2">
                   <label htmlFor="message" className="font-body text-xs tracking-widest text-[#3C3A36]/60 uppercase">
-                    Message
+                    Mensaje
                   </label>
                   <textarea
                     id="message"
@@ -317,19 +317,19 @@ export function Contact() {
                   disabled={status === "sending"}
                   className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-[#B0A080] transition-colors cursor-pointer w-fit flex items-center gap-2 group"
                 >
-                  {status === "sending" ? "Sending..." : "Send Message"}
+                  {status === "sending" ? "Enviando..." : "Enviar mensaje"}
                   <span className="transition-transform group-hover:translate-x-1">→</span>
                 </button>
                 {status === "success" && (
                   <p className="font-body text-xs tracking-widest text-emerald-700/90 uppercase mt-2 animate-fade-in">
-                    — Message sent successfully. We will get back to you shortly.
+                    — Mensaje enviado con éxito. Nos pondremos en contacto a la brevedad.
                   </p>
                 )}
 
                 {status === "error" && (
                   
                   <p className="font-body text-xs tracking-widest text-rose-700/90 uppercase mt-2">
-                    — Transmission failed. Please try again.
+                    — Error en el envío. Por favor, intentalo de nuevo.
                   </p>
                 )}
 

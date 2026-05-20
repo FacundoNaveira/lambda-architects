@@ -6,17 +6,17 @@ import { useReveal } from "@/components/site/useReveal";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Lambda Architecture" },
+      { title: "Proyectos — Lambda Arquitectura" },
       {
         name: "description",
         content:
-          "Selected works by Lambda Architecture — pavilions, houses and cultural buildings shaped by material, light and land.",
+          "Obras seleccionadas de Lambda Arquitectura: pabellones, viviendas y edificios culturales moldeados por la materia, la luz y la tierra.",
       },
-      { property: "og:title", content: "Projects — Lambda Architecture" },
+      { property: "og:title", content: "Proyectos — Lambda Arquitectura" },
       {
         property: "og:description",
         content:
-          "Selected works by Lambda Architecture — pavilions, houses and cultural buildings shaped by material, light and land.",
+          "Obras seleccionadas de Lambda Arquitectura: pabellones, viviendas y edificios culturales moldeados por la materia, la luz y la tierra.",
       },
     ],
   }),
@@ -32,42 +32,42 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Azabudai Hills",
-    place: "Tokyo, JP",
+    place: "Tokio, Japón",
     img: "/Azabudai Hills.jpg",
   },
   {
     title: "Little Island",
-    place: "New York, US",
+    place: "Nueva York, EE. UU.",
     img: "/little island.jpg",
   },
   {
     title: "Xi’an CCBD (Centre Culture Business District)",
-    place: "Xian, China",
+    place: "Xi'an, China",
     img: "/Xi’an CCBD (Centre Culture Business District).jpg",
   },
   {
     title: "Zeitz MOCAA",
-    place: "Cape Town, ZA",
+    place: "Ciudad del Cabo, Sudáfrica",
     img: "/Zeitz MOCAA.jpg",
   },
   {
     title: "EDEN",
-    place: "Singapore",
+    place: "Singapur",
     img: "/EDEN.jpg",
   },
   {
     title: "Bogota EAN University",
-    place: "Bogota, Colombia",
+    place: "Bogotá, Colombia",
     img: "/Bogota EAN University.jpg",
   },
   {
     title: "Columbia Library",
-    place: "New York, US",
+    place: "Nueva York, EE. UU.",
     img: "/Columbia Library.jpg",
   },
   {
     title: "Google Bay View",
-    place: "California, US",
+    place: "California, EE. UU.",
     img: "/Google Bay View.jpg",
   },
 ];
@@ -90,7 +90,7 @@ function ProjectsPage() {
             className="mb-12 text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted-foreground hover:text-accent transition-colors group flex items-center gap-2 cursor-pointer w-fit"
           >
             <span className="transition-transform group-hover:-translate-x-1">←</span>
-            Back
+            Volver
           </Link>
           <div className="grid grid-cols-12 gap-8 items-end">
             <div className="col-span-12 md:col-span-3"></div>
@@ -99,8 +99,8 @@ function ProjectsPage() {
                 data-reveal
                 className="font-display font-light text-5xl md:text-7xl leading-[1.02] tracking-tight"
               >
-                A decade of buildings,
-                <span className="italic text-accent"> drawn slowly</span>.
+                Una década de obras,
+                <span className="italic text-accent"> diseñadas a medida</span>.
               </h1>
             </div>
           </div>
