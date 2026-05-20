@@ -23,20 +23,18 @@ export function Team() {
   return (
     <section id="team" className="relative bg-background text-foreground py-24 md:py-36 border-t border-foreground/10">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
-        <div className="grid grid-cols-12 gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
+        <div className="relative mb-16 flex flex-col md:flex-row md:items-center md:justify-center w-full">
+          <div className="w-full md:w-auto md:absolute md:left-0 mb-6 md:mb-0">
             <p data-reveal className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
               — Dirección
             </p>
           </div>
-          <div className="col-span-12 md:col-span-9">
-            <h2
-              data-reveal
-              className="font-display font-light text-4xl md:text-6xl leading-[1.05] tracking-tight"
-            >
-              Diseño con propósito.
-            </h2>
-          </div>
+          <h2
+            data-reveal
+            className="font-display font-light text-4xl md:text-6xl leading-[1.05] tracking-tight text-center w-full"
+          >
+            Diseño con propósito.
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 mt-12">
