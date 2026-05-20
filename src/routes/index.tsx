@@ -4,7 +4,7 @@ import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Vision } from "@/components/site/Vision";
 import { Experience } from "@/components/site/Experience";
-import { Contact } from "@/components/site/Contact";
+import { Contact, Team, Testimonials } from "@/components/site/Contact";
 import { useReveal } from "@/components/site/useReveal";
 
 export const Route = createFileRoute("/")({
@@ -25,6 +25,8 @@ function Site({ mounted }: { mounted: boolean }) {
       <Hero />
       <Vision />
       {mounted && <Experience />}
+      <Team />
+      <Testimonials />
       <Contact />
     </main>
   );

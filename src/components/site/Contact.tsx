@@ -19,7 +19,7 @@ const team = [
   },
 ];
 
-function Team() {
+export function Team() {
   return (
     <section id="team" className="relative bg-background text-foreground py-24 md:py-36 border-t border-foreground/10">
       <div className="mx-auto max-w-[1600px] px-6 md:px-12">
@@ -56,6 +56,82 @@ function Team() {
               <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-2">
                 {member.role}
               </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const testimonials = [
+  {
+    quote: "El diseño del nuevo centro médico superó todas nuestras expectativas. Lograron un equilibrio perfecto entre la complejidad técnica sanitaria y un ambiente humano inundado de luz natural.",
+    name: "Dr. Carlos Pellegrini",
+    role: "Director General de Infraestructura Sanitaria",
+    img: "/cliente1.jpg",
+  },
+  {
+    quote: "La experiencia de proyectar nuestra vivienda bioclimática con Lambda fue impecable. Entienden el entorno de Rosario y optimizan los recursos de una manera que se nota día a día en el confort de la casa.",
+    name: "Ing. Elena Fontanarrosa",
+    role: "Propietaria de Casa M4",
+    img: "/cliente2.jpg",
+  },
+  {
+    quote: "Rigurosidad técnica, cumplimiento de plazos y un lenguaje estético contemporáneo exquisito. Es un estudio que eleva el estándar de la arquitectura corporativa en la región.",
+    name: "Arq. Santiago Rossi",
+    role: "Consultor de Desarrollos Urbanos",
+    img: "/cliente3.jpg",
+  },
+];
+
+export function Testimonials() {
+  return (
+    <section id="testimonials" className="relative bg-background text-foreground py-24 md:py-36 border-t border-foreground/10">
+      <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+        <div className="grid grid-cols-12 gap-8 mb-16">
+          <div className="col-span-12 md:col-span-3">
+            <p data-reveal className="text-[10px] tracking-[0.4em] uppercase text-muted-foreground">
+              — OPINIONES
+            </p>
+          </div>
+          <div className="col-span-12 md:col-span-9">
+            <h2
+              data-reveal
+              className="font-display font-light text-4xl md:text-6xl leading-[1.05] tracking-tight"
+            >
+              Confianza materializada en espacios.
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+          {testimonials.map((t, idx) => (
+            <div key={idx} className="flex flex-col justify-between" data-reveal>
+              <div className="flex flex-col">
+                <div className="text-[#B0A080] text-xs flex gap-1 mb-3">
+                  {"★".repeat(5)}
+                </div>
+                <p className="text-muted-foreground font-light text-sm italic leading-relaxed mb-6">
+                  “{t.quote}”
+                </p>
+              </div>
+              <div className="flex items-center gap-4 mt-4">
+                <img
+                  src={t.img}
+                  alt=""
+                  loading="lazy"
+                  className="w-12 h-12 rounded-full object-cover grayscale opacity-80"
+                />
+                <div className="flex flex-col">
+                  <h4 className="font-display text-base font-light text-foreground">
+                    {t.name}
+                  </h4>
+                  <p className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground mt-0.5">
+                    {t.role}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -123,7 +199,6 @@ export function Contact() {
 
   return (
     <>
-      <Team />
       <Sponsors />
       <section id="contact" className="relative bg-secondary text-foreground">
         <div className="mx-auto max-w-[1600px] px-6 md:px-12 py-32 md:py-48">
