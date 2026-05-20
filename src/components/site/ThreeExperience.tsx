@@ -95,7 +95,7 @@ export default function ThreeScene() {
       orthographic
       shadows
       dpr={[1, 2]}
-      camera={{ position: [10, 4, 10], zoom: 125, near: -100, far: 100 }}
+      camera={{ position: [10, 4, 10], zoom: 110, near: -100, far: 100 }}
       gl={{ antialias: true, alpha: true }}
       className="pointer-events-none"
     >

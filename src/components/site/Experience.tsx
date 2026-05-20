@@ -1,97 +1,49 @@
-import { useEffect, useRef, useState, lazy, Suspense } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useState, lazy, Suspense } from "react";
 
 const ThreeScene = lazy(() => import("./ThreeExperience.tsx"));
 
 export function Experience() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const canvasWrapRef = useRef<HTMLDivElement>(null);
-  const headingRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    if (typeof window === "undefined") return;
-    gsap.registerPlugin(ScrollTrigger);
-
-  const ctx = gsap.context(() => {
-      // Expand canvas as user scrolls in
-      gsap.fromTo(
-        canvasWrapRef.current,
-        { width: "58%", height: "58vh", borderRadius: "16px" },
-        {
-          width: "78%",
-          height: "86vh",
-          borderRadius: "8px",
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top bottom",
-            end: "top top",
-            scrub: 0.8,
-          },
-        }
-      );
-
-      gsap.to(headingRef.current, {
-        opacity: 0,
-        y: -40,
-        ease: "none",
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top top",
-        end: "+=40%",
-        scrub: true,
-        pin: false,
-      },
-    });
-  }, sectionRef);
-
-    return () => ctx.revert(); // Limpieza de GSAP al desmontar
-}, []);
+  }, []);
 
   return (
     <section
       id="experience"
-      ref={sectionRef}
-      className="relative bg-foreground text-background"
+      className="relative bg-foreground text-background py-24 md:py-36 overflow-hidden"
     >
-      <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
-        <div
-          ref={canvasWrapRef}
-          className="relative overflow-hidden bg-foreground"
-          style={{ width: "58%", height: "58vh" }}
-        >
-          {mounted && (
-            <Suspense fallback={<div className="h-full w-full bg-foreground" />}>
-              <ThreeScene />
-            </Suspense>
-          )}
-        </div>
-
-        <div
-          ref={headingRef}
-          className="pointer-events-none absolute top-10 md:top-16 left-0 right-0 px-6 md:px-12 z-10"
-        >
-          <div className="mx-auto max-w-[1600px] flex items-start">
-            <p className="text-[10px] tracking-[0.4em] uppercase text-background/70">
-              — 3D Experience
+      <div className="mx-auto max-w-[1600px] px-6 md:px-12">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-12 gap-12 md:gap-16 items-center">
+          {/* Left Column: Text & CTA */}
+          <div className="col-span-12 md:col-span-6 flex flex-col justify-center">
+            <p className="text-[10px] tracking-[0.4em] uppercase text-background/60 mb-6">
+              — Rosario, Argentina
             </p>
-          </div>
-        </div>
-
-        <div className="pointer-events-none absolute bottom-10 left-0 right-0 px-6 md:px-12 z-10">
-          <div className="mx-auto max-w-[1600px]">
-            <h2 className="font-display font-light text-3xl md:text-5xl text-background/95 max-w-2xl leading-tight">
-              Form, in conversation with light.
+            <h2 className="font-display font-light text-4xl md:text-5xl lg:text-6xl text-background leading-tight mb-8">
+              Nuestra presencia en Argentina
             </h2>
+            <p className="font-body text-sm md:text-base leading-relaxed text-background/70 max-w-xl mb-10">
+              Desarrollamos infraestructura de salud pública con un enfoque en la eficiencia lumínica y la integración urbana. Este hospital regional representa un hito en la arquitectura sanitaria de Santa Fe.
+            </p>
+            <button className="border border-background/20 hover:border-background/60 hover:text-accent hover:bg-background/5 text-background/80 transition-all uppercase tracking-[0.2em] text-[10px] md:text-xs px-8 py-4 w-fit cursor-pointer">
+              Ver el proyecto
+            </button>
+          </div>
+
+          {/* Right Column: 3D Model */}
+          <div className="col-span-12 md:col-span-6 w-full h-[350px] md:h-[550px] flex items-center justify-center relative">
+            <div className="w-full h-full max-w-[500px] max-h-[500px]">
+              {mounted && (
+                <Suspense fallback={<div className="h-full w-full bg-foreground" />}>
+                  <ThreeScene />
+                </Suspense>
+              )}
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Scroll runway so the pin/expand has length */}
-      <div className="h-[80vh]" />
     </section>
   );
 }
